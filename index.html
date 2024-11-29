@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="weather, weather forecast, weather app, cold, warm, sunny, cloudy, rainy, snow, fog, hazy" />
+    <meta name="description" content="Weather Forecast App" />
+    <link rel="icon" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body class="dark-body-bg" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg py-5">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex justify-content-center align-items-center"
+          href="#">
+          <img src="./assets/images/logo.png" alt="Site Logo" class="me-3" />
+          <div>
+            <h1 class="fs-4 fw-bold m-0">Weather</h1>
+            <div class="tag text-secondary">tagline goes here</div>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="menu navbar-nav ms-auto my-2 my-lg-0">
+            <li
+              id="home-nav"
+              class="nav-item border border-2 me-1 px-3 rounded-pill active">
+              <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item border border-2 mx-1 px-3 rounded-pill">
+              <a class="nav-link text-white" href="#">News</a>
+            </li>
+            <li class="nav-item border border-2 mx-1 px-3 rounded-pill">
+              <a class="nav-link text-white" href="#">Live Cameras</a>
+            </li>
+            <li class="nav-item border border-2 mx-1 px-3 rounded-pill">
+              <a class="nav-link text-white" href="#">Photos</a>
+            </li>
+            <li
+              id="contact-nav"
+              class="nav-item border border-2 ms-1 px-3 rounded-pill">
+              <a class="nav-link text-white" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="bg-body">
+      <div class="container py-4">
+        <div class="input-group mb-3 p-1 rounded-pill dark-body-bg">
+          <input
+            id="location"
+            type="text"
+            class="form-control rounded-pill border-0 shadow-none"
+            placeholder="Find Your Location" />
+          <button
+            class="btn blue-bg rounded-pill px-4 py-2 text-white"
+            type="button"
+            id="find-btn">
+            Find
+          </button>
+        </div>
+
+        <div class="d-flex flex-column flex-lg-row mt-5">
+          <div class="card current-day col border-0 light-dark-bg"></div>
+
+          <div class="card col rounded-0 border-0 dark-bg"></div>
+
+          <div class="card col border-0 light-dark-bg"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Contact Section Initially Hidden -->
+    <div class="contact-main container mb-3 d-none">
+      <div class="row rounded-pill dark-bg my-5 py-3 px-4">
+        <a
+          href="#"
+          id="return-home"
+          class="w-auto text-decoration-none text-secondary"
+          >Home</a
+        >
+        &rightarrow; Contact
+      </div>
+      <div class="row">
+        <div class="col-lg d-flex justify-content-center">
+          <div class="card col-10 dark-bg p-3 border-0 mb-3">
+            <div class="card-body">
+              <iframe
+                src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=52.70967533219885, -8.020019531250002&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                width="100%"
+                height="100%"
+                class="rounded-3"
+                marginwidth="0"></iframe>
+            </div>
+            <div class="card-footer dark-bg border-0">
+              <ul class="list-unstyled text-secondary small">
+                <li>
+                  <i class="blue-text fa-solid fa-location-dot fa-fw me-2"></i
+                  >Company Name INC. 2803 Avenue Street, Los Angeles
+                </li>
+                <li>
+                  <i class="blue-text fa-solid fa-phone fa-fw me-2"></i
+                  ><a
+                    class="text-secondary text-decoration-none"
+                    href="tel:+1 800 314 235"
+                    >+1 800 314 235</a
+                  >
+                </li>
+                <li>
+                  <i class="blue-text fa-regular fa-envelope fa-fw me-2"></i>
+                  <a
+                    class="text-secondary text-decoration-none"
+                    href="mailto:contact@companyname.com"
+                    >contact@companyname.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg">
+          <h2 class="fs-1 fw-light mb-4">Contact us</h2>
+          <p class="text-secondary small">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+            consectetur inventore ducimus, facilis, numquam id soluta omnis eius
+            recusandae nesciunt vero repellat harum cum. Nisi facilis odit hic,
+            ipsum sed!
+          </p>
+          <form class="row g-2">
+            <div class="col-lg-6">
+              <input
+                type="text"
+                class="form-control rounded-pill bg-transparent"
+                id="exampleFormControlInput1"
+                placeholder="Your Name" />
+            </div>
+            <div class="col-lg-6">
+              <input
+                type="email"
+                class="form-control rounded-pill bg-transparent"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com" />
+            </div>
+            <div class="col-lg-6">
+              <input
+                type="text"
+                class="form-control rounded-pill bg-transparent"
+                id="exampleFormControlInput1"
+                placeholder="Company Name" />
+            </div>
+            <div class="col-lg-6">
+              <input
+                type="url"
+                class="form-control rounded-pill bg-transparent"
+                id="exampleFormControlInput1"
+                placeholder="Website " />
+            </div>
+            <div class="col-12">
+              <textarea
+                class="form-control bg-transparent rounded-5 py-3"
+                id="exampleFormControlTextarea1"
+                placeholder="Message"
+                rows="6"></textarea>
+            </div>
+            <div class="text-end">
+              <button class="btn blue-bg rounded-pill">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="dark-bg">
+      <div class="container py-5">
+        <div class="row g-3 mb-2">
+          <div class="col-lg-8">
+            <div class="input-group p-1 rounded-pill bg-dark">
+              <input
+                type="email"
+                class="form-control rounded-pill border-0 shadow-none"
+                placeholder="Enter your email to subscribe" />
+              <button
+                class="btn blue-bg rounded-pill px-4 py-2 text-white"
+                type="button"
+                id="button-addon2">
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-center gap-3 align-items-center col-lg-4">
+            <i
+              class="fa-brands fa-facebook-f rounded-pill fs-4 text-center"></i>
+            <i class="fa-brands fa-twitter rounded-pill fs-4 text-center"></i>
+            <i
+              class="fa-brands fa-google-plus-g rounded-pill fs-4 text-center"></i>
+            <i class="fa-brands fa-pinterest rounded-pill fs-4 text-center"></i>
+          </div>
+        </div>
+
+        <div class="row">
+          <p class="small text-secondary">
+            Copyright 2014 Company name. Designed by Themezy. All rights
+            reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
